@@ -26,7 +26,9 @@ export default function TaskDetails({ taskId }: TaskDetailsProps) {
 				<div className=" flex w-full ">
 					<Task.Edit {...task} />
 					<ConfirmModale
-						onConfirm={() => dispatch(tasksSlice.actions.delete(task.id))}
+						onConfirm={() => {
+							dispatch(tasksSlice.actions.delete(task.id));
+						}}
 						title={`delete ${task.title} task ?`}
 						content="are you sure you want to delete this task ? this action cannot be undone."
 						className=" w-full variant-alert "

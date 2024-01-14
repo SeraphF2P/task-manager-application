@@ -50,9 +50,12 @@ export function Add() {
 export function View() {
 	const tasks = useSelector((state) => state.tasks);
 	return (
-		<Typography as="section" className="relative mx-2  max-w-[420px]">
+		<Typography
+			as="section"
+			className=" mx-2 min-h-[320px] w-full max-w-[420px]"
+		>
 			<h1>my tasks</h1>
-			<section className=" divide-y-2 remove-scroll-bar h-full max-h-[420px]  overflow-y-scroll shadow-md border-2 border-neutral-black  rounded-md  ">
+			<section className="relative divide-y-2 remove-scroll-bar min-h-[396px]  max-h-[420px]  overflow-y-scroll shadow-md border-2 border-neutral-black  rounded-md  ">
 				{tasks?.map((task, index) => (
 					<div key={task.id} className="  flex     bg-white">
 						<div className=" w-20 mx-4 bg-primary/10 flex justify-center items-center text-3xl font-bold text-gray-400">

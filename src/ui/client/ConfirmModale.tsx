@@ -25,12 +25,9 @@ const ConfirmModale: FC<ConfirmModaleProps> = ({
 							<p className=" py-6 leading-6">{content}</p>
 							<div className=" flex justify-between">
 								<Modale.Close variant="ghost">close</Modale.Close>
-								<Modale.Close
-									className=" [--variant:--alert]"
-									onClick={onConfirm}
-								>
+								<Btn className=" variant-alert" onClick={onConfirm}>
 									confirm
-								</Modale.Close>
+								</Btn>
 							</div>
 						</div>
 					</Modale.Content>

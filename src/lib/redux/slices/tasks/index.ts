@@ -1,5 +1,6 @@
 /* Core */
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { redirect } from 'next/navigation'
 import { toast } from '~/lib/myToast'
 
 /* Instruments */
@@ -31,6 +32,7 @@ export const tasksSlice = createSlice({
       if (taskIndex !== -1) {
         state.splice(taskIndex, 1)
         toast({ type: "success", message: "deleted successfully" })
+
       } else {
         toast({ type: "error", message: "Task not found" })
       }
